@@ -19,7 +19,7 @@ class PublicController extends Controller
 
     public function topiclist()
     {
-        $topics = Topic::latest()->take(3)->paginate(3);
+        $topics = Topic::where('published',1)->latest()->take(3)->paginate(3);
         $trendingtopics = Topic::where('published',1)->where('trending',1)->latest()->take(2)->get();
         return view('public.topics-listing',compact('topics','trendingtopics'));
     }
