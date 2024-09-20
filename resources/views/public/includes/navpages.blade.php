@@ -18,25 +18,37 @@
             <ul class="navbar-nav ms-lg-5 me-lg-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('index')}}">Home</a>
+                    <a class="nav-link {{ request()->routeIs('index') ? 'active' : '' }}" href="{{route('index')}}">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('topiclist')}}">Topics Listing</a>
+                    <a class="nav-link {{ request()->routeIs('topiclist')  ? 'active' : '' }} " href="{{route('topiclist')}}">Topics Listing</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{route('contact')}}">Contact Us</a>
+                    <a class="nav-link {{ request()->routeIs('contact')  ? 'active' : '' }}" href="{{route('contact')}}">Contact Us</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link " href="{{route('testimonials')}}">Our Client Says</a>
+                    <a class="nav-link {{ request()->routeIs('testimonials') ? 'active' : '' }} " href="{{route('testimonials')}}">Our Client Says</a>
                 </li>
             </ul>
 
+            
             <div class="d-none d-lg-block">
                 <a href="{{ route('register') }}" class="navbar-icon bi-person smoothscroll"></a>
             </div>
         </div>
     </div>
 </nav>
+
+<script>
+    document.querySelectorAll('.navbar-nav ').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelectorAll('.navbar-nav ').forEach(nav => {
+            nav.classList.remove('active');
+        });
+        this.classList.add('active');
+    });
+});
+</script>
