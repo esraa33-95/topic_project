@@ -46,7 +46,7 @@
                 </thead>
                 <tbody>
                     @foreach ($messages as $msg)
-                    @if ($msg->read_at >= 1)
+                    @if ($msg->read_at == 1)
                     <tr>
                         <th scope="row">{{$msg->created_at->format('d M Y')}}</th>
                         <td><a href="{{route('message.messagedetails',$msg->id)}}" class="text-decoration-none text-dark">{{Str::limit($msg->message,20,'...')}}</a></td>
