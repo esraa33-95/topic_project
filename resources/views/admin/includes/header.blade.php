@@ -26,7 +26,19 @@
                     <p class="fw-light text-muted mb-0">{{ Auth::user()?->email}}</p>
                   </div>
                   <a class="dropdown-item">My Profile</a>
-                  <a class="dropdown-item">Sign Out</a>
+                  {{-- <a class="dropdown-item"  href="{{ route('login') }}">Sign Out</a> --}}
+                  <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <a class="dropdown-item logout">Sign Out</a>
+                  </form>
+                  <script>
+                    const logoutBtn = document.querySelector('.logout');
+                  
+                    logoutBtn.addEventListener('click', () => {
+                      logoutBtn.parentElement.submit(); 
+                    });
+                  </script>
+
                   <p class="footer" style="padding-top: 15px; font-size: 9px; text-align: center">
                     Privacy Policy . Terms . Cookies
                   </p>
