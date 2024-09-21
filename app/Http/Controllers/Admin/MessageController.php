@@ -39,10 +39,6 @@ class MessageController extends Controller
     public function show(string $id)
     {
         $msg = Contact::FindOrfail($id);
-        // if (!$msg->read_at) {
-        //     $msg->read_at = now();
-        //     $msg->save();
-        // }
         return view('admin.message_details',compact('msg'));
     }
 

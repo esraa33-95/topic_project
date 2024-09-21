@@ -32,7 +32,6 @@ class CategoryController extends Controller
     {
         $data = $request->validate([
             'category_name'=>'required|string',
-
         ]);
         Category::create($data);
         return redirect()->route('categories.index');

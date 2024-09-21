@@ -81,8 +81,6 @@ class TestimonialController extends Controller
         }
         Testimonial::where('id',$id)->update($data);
         return redirect()->route('testimonial.index');
-    
-
     }
 
     /**

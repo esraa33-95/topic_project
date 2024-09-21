@@ -105,15 +105,12 @@ Route::get('delete/{id}','destroy')->name('destroy');
 });
 
 
-
 Auth::routes(['verify'=>true]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 
 //contact
 Route::get('contactus', [PublicController::class, 'contact'])->name('contact.index'); //show page 
 Route::post('contact', [ContactController::class, 'store'])->name('store'); //send db and mailtrap
-
 
 // Route to increment views of topic
 Route::get('/topic/{id}/increment-views', [TopicController::class, 'incrementViews'])->name('topic.incrementViews');
