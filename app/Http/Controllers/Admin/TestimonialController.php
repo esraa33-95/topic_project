@@ -41,7 +41,7 @@ class TestimonialController extends Controller
         ]);
 
         if($request->hasFile('image')){
-            $data['image'] = $this->uploadFile($request->image,'assests/images/testimonials');
+            $data['image'] = $this->uploadFile($request->image,'assets/images/testimonials');
         }
         Testimonial::create($data);
         return redirect()->route('testimonial.index');
