@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-@include('admin.includes.head')
+@include('auth.includes.head')
 
-<body class="registeration-wrapper"
-	style="background-image: linear-gradient(rgba(255, 255, 255, 0.735), rgba(0, 0, 0, 0.5))">
+@include('auth.includes.image')
 
 <div class="container my-5 bg-white rounded-3">
 	<div class="row">

@@ -26,10 +26,11 @@
                     <p class="fw-light text-muted mb-0">{{ Auth::user()?->email}}</p>
                   </div>
                   <a class="dropdown-item">My Profile</a>
-                  {{-- <a class="dropdown-item"  href="{{ route('login') }}">Sign Out</a> --}}
+                  {{-- <a class="dropdown-item"  href="{{ route('logout') }}">Sign Out</a> --}}
+                  
                   <form action="{{ route('logout') }}" method="post">
                     @csrf
-                    <a class="dropdown-item logout">Sign Out</a>
+                    <button class="dropdown-item logout">Sign Out</button>
                   </form>
                   <script>
                     const logoutBtn = document.querySelector('.logout');
