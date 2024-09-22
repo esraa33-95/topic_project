@@ -11,7 +11,7 @@ class PublicController extends Controller
 {
     public function index()
     {
-        $topics = Topic::where('published',1)->latest()->take(2)->get();
+        $topics = Topic::with('category')->limit(2)->get();
         $categories = Category::with(['topics' => function ($query) { $query->take(3);}])->limit(5)->get();
         $testimonials = Testimonial::limit(3)->get();
         return view('public.index',compact('topics','categories','testimonials'));
