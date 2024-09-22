@@ -6,7 +6,7 @@ use App\Models\Category;
 use App\Models\Contact;
 use App\Models\Testimonial;
 use App\Models\Topic;
-//use App\Models\User;
+use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        //  User::factory(5)->create();
+         User::factory(5)->create();
          Category::factory(5)->create();
          Topic::factory(25)->create();
          Testimonial::factory(5)->create();
