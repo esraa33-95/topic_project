@@ -22,7 +22,6 @@
                         function incrementViews(topicId) {
                             $.get(`/topic/${topicId}/increment-views`, function(data) {
                                 $('#views-count-' + topicId).text(data.views + ' views');
-                                alert('View count updated!');
                             }).fail(function() {
                                 alert('Error updating view count.');
                             });
