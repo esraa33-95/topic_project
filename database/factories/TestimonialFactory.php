@@ -18,7 +18,7 @@ class TestimonialFactory extends Factory
     {
         return [
             'name'=>fake()->word(),
-            'image'=>basename(fake()->image(public_path('assets/images/testimonials'))),
+            'image'=>basename(fake()->image(public_path('assests/images/testimonials'))),
             'content'=>fake()->text(),
             'published'=>fake()->boolean(),
         ];

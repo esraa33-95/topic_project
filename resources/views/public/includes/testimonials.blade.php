@@ -17,7 +17,7 @@
                         
                         <div class="col-md-4 testimonials">
                             <img class="d-block rounded-3"
-                                src="{{asset('assets/images/testimonials/'.$test->image)}}"
+                                src="{{asset('assests/images/testimonials/'.$test->image)}}"
                                 alt="First slide">
                         </div>
                         <div class="col-md-8 px-md-5 d-flex flex-column justify-content-center">

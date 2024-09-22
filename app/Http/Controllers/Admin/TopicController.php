@@ -45,7 +45,7 @@ class TopicController extends Controller
 
         ]);
         if($request->hasFile('image')){
-            $data['image'] = $this->uploadFile($request->image,'assets/images/topics');
+            $data['image'] = $this->uploadFile($request->image,'assests/images/topics');
         }
         Topic::create($data);
         return redirect()->route('topic.index');
@@ -86,7 +86,7 @@ class TopicController extends Controller
 
         ]);
         if($request->hasFile('image')){
-            $data['image'] = $this->uploadFile($request->image,'assets/images/topics');
+            $data['image'] = $this->uploadFile($request->image,'assests/images/topics');
         }
         Topic::where('id',$id)->update($data);
         return redirect()->route('topic.index');

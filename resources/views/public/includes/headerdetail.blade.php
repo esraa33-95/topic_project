@@ -34,7 +34,7 @@
 
             <div class="col-lg-5 col-12">
                 <div class="topics-detail-block bg-white shadow-lg">
-                    <img src="{{asset('assets/images/topics/'.$topic->image)}}" class="topics-detail-block-image img-fluid">
+                    <img src="{{asset('assests/images/topics/'.$topic->image)}}" class="topics-detail-block-image img-fluid">
                 </div>
             </div>
 

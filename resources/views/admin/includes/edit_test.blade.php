@@ -38,7 +38,7 @@
           <label for="" class="form-label col-md-2 fw-bold text-md-end">Image:</label>
           <div class="col-md-10">
             <input type="file" class="form-control" style="padding: 0.7rem; margin-bottom: 10px;" name="image"/>
-            <img src="{{asset('assets/images/testimonials/'.$test->image)}}" alt="" style="width: 10rem;">
+            <img src="{{asset('assests/images/testimonials/'.$test->image)}}" alt="" style="width: 10rem;">
           </div>
           @error('image')
                 <div class="alert alert-warning">{{$message}}</div>

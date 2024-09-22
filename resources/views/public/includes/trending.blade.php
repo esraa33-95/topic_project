@@ -22,7 +22,7 @@
                             <span class="badge bg-finance rounded-pill ms-auto">{{ $topic->views }}</span>
                         </div>
 
-                        <img src="{{asset('assets/images/topics/'.$topic->image)}}" class="custom-block-image img-fluid" alt="">
+                        <img src="{{asset('assests/images/topics/'.$topic->image)}}" class="custom-block-image img-fluid" alt="">
                     </a>
                 </div>
             </div>

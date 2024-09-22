@@ -12,7 +12,7 @@
                 
                 <div class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5">
                     <div class="d-flex">
-                        <img src="{{asset('assets/images/topics/'.$topic->image)}}" class="custom-block-image img-fluid" alt="">
+                        <img src="{{asset('assests/images/topics/'.$topic->image)}}" class="custom-block-image img-fluid" alt="">
 
                         <div class="custom-block-topics-listing-info d-flex">
                             <div>

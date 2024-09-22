@@ -18,7 +18,7 @@ class TopicFactory extends Factory
     {
         return [
             'title'=>fake()->word(),
-            'image'=>basename(fake()->image(public_path('assets/images/topics'))),
+            'image'=>basename(fake()->image(public_path('assests/images/topics'))),
             'content'=>fake()->text(),
             'category_id'=>fake()->numberBetween(1,5),
             'published'=>fake()->boolean(),
