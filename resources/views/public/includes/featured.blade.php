@@ -22,7 +22,7 @@
                     </a>
                 </div>
             </div>
-    @else
+            @else
         
             <div class="col-lg-6 col-12">
                 <div class="custom-block custom-block-overlay">
@@ -59,7 +59,17 @@
                                 </li>
                             </ul>
 
-                            <a href="{{route('topic.incrementViews',$topic->id)}}" class="custom-icon bi-bookmark ms-auto"></a>
+                            <a href="#top" class="custom-icon bi-bookmark ms-auto" onclick="incrementViews({{ $topic->id }})"></a>
+                            <script>
+                                function incrementViews(topicId) {
+                                    $.get(`/topic/${topicId}/increment-views`, function(data) {
+                                        $('#views-count-' + topicId).text(data.views + ' views');
+                                        alert('View count updated!');
+                                    }).fail(function() {
+                                        alert('Error updating view count.');
+                                    });
+                                }
+                            </script>
                             
                         </div>
 
@@ -68,7 +78,7 @@
                 </div>
             </div>
             @endif
-             @endforeach
+            @endforeach
         </div>
     </div>
 </section>
